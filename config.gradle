@@ -17,13 +17,16 @@ project.ext {
     }
 }
 ext {
-    android = [ androidSupportSdkVersion    : "",
-                retrofitSdkVersion          :"",
-                dagger2SdkVersion           :"",
-                rxlifecycleSdkVersion       :"",
-                espressoSdkVersion          :"",
+    android = [ androidSupportSdkVersion    : "29.0.0",
+                retrofitSdkVersion          : "",
+                dagger2SdkVersion           : "",
+                rxlifecycleSdkVersion       : "",
+                espressoSdkVersion          : "",
     ]
     dependencies = [
+            "javax.annotation"       : 'javax.annotation:jsr250-api:1.0',
+            "annotations"            : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
+
             //基本配置
             "arouter-api"       : 'com.alibaba:arouter-api:1.5.0',//ARouter api
             "arouter-compiler"  : 'com.alibaba:arouter-compiler:1.2.2',//ARouter

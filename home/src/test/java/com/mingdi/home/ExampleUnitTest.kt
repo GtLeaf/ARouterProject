@@ -1,4 +1,4 @@
-package com.mingdi.commonbase
+package com.mingdi.home
 
 import org.junit.Test
 

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListener() {
         btn_go_home.setOnClickListener {
-            ARouter.getInstance().build("/app/target")
+            ARouter.getInstance().build(ARouterConstants.APP_TARGET)
                     .withString("key", et_params.text.toString())
                     .navigation()
         }

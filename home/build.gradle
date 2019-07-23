@@ -1,18 +1,18 @@
-if (isNeedChatModule.toBoolean()) {
+if (isNeedHomeModule.toBoolean()) {
     apply plugin: 'com.android.library'
 } else {
     apply plugin: 'com.android.application'
 }
-
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+
 android {
     rootProject.ext.setDefaultConfig project
 
     defaultConfig {
-        if (!isNeedChatModule.toBoolean()){
-            applicationId "com.mingdi.chat"
+        if (!isNeedHomeModule.toBoolean()) {
+            applicationId "com.mingdi.home"
         }
     }
 
@@ -34,7 +34,6 @@ kapt {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
     implementation rootProject.ext.dependencies["appcompat"]
     implementation rootProject.ext.dependencies["core-ktx"]

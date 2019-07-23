@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_chat.*
 @Route(path = "/chat/test")
 class ChatActivity : AppCompatActivity() {
 
+    @JvmField
     @Autowired
     var key2 = ""
 
