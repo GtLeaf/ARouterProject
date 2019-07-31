@@ -1,16 +1,12 @@
-package com.mingdi.chat
+package com.mingdi.find
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class ChatActivity : AppCompatActivity() {
-
-    /*@JvmField
-    @Autowired
-    var key2 = ""*/
+class FindActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat)
+        setContentView(R.layout.activity_find)
     }
 }

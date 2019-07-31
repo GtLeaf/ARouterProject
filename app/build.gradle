@@ -4,15 +4,15 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'kotlin-kapt'
+apply from: "${rootProject.rootDir}/config.gradle"
 
 android {
-    rootProject.ext.setDefaultConfig project
+    project.ext.setDefaultConfig project
 
     defaultConfig {
-
         ext.applicationId = "com.mingdi.arouterproject"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,12 +21,6 @@ android {
     }
 }
 
-kapt {
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.getName())
-    }
-    generateStubs = true
-}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -37,20 +31,19 @@ dependencies {
     implementation rootProject.ext.dependencies["constraint-layout"]
     implementation rootProject.ext.dependencies["annotations"]
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation rootProject.ext.dependencies["junit"]
     androidTestImplementation rootProject.ext.dependencies["test:runner"]
     androidTestImplementation rootProject.ext.dependencies["espresso-core"]
 
-    //阿里ARouter
-    implementation rootProject.ext.dependencies["arouter-api"]
-    kapt rootProject.ext.dependencies["arouter-compiler"]
+
     if (isNeedChatModule.toBoolean()) {
         implementation project(':chat')
     }
     if (isNeedHomeModule.toBoolean()) {
         implementation project(':home')
+    }
+    if (isNeedFindModule.toBoolean()) {
+        implementation project(':find')
     }
     implementation project(':commonlib')
 }

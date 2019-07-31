@@ -3,24 +3,7 @@ apply from: "config.gradle"
 
 buildscript {
     ext.kotlin_version = '1.3.31'
-    ext.compileSdkVersion = 29
-    ext.buildToolsVersion = "29.0.0"
-    ext {
-        isModule = false
-        moduleShopMall = false
-        moduleShopCart = false
-        moduleWelfare = false
-        moduleCommonUi = false
 
-        ext.compileSdkVersion = 29
-        ext.buildToolsVersion = '29.0.0'
-        ext.minSdkVersion = 18
-        ext.targetSdkVersion = 29
-        ext.versionCode = 1
-        ext.versionName = "1.0.0"
-        ext.androidSupportSdkVersion = "29.0.0"
-
-    }
     //仓库
     repositories {
         google()
