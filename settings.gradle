@@ -1,1 +1,1 @@
-include ':app', ':chat', ':home', ':commonlib', ':find'
+include ':app', ':chat', ':home', ':commonlib', ':find', ':login'
