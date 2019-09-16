@@ -2,10 +2,8 @@ package com.mingdi.commonlib
 
 class AppConfig {
     companion object{
-        private val LOGIN_APP = "package com.mingdi.login.service.LoginApp"
+        private const val LOGIN_APP = "package com.mingdi.login.service.LoginApp"
 
-        var moduleApps = {
-            LOGIN_APP
-        }
+        var moduleApps = arrayOf(LOGIN_APP)
     }
 }
